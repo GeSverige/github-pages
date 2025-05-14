@@ -1,0 +1,17 @@
+[
+  {
+    "id": "raddabarnen",
+    "namn": "Rädda Barnen",
+    "logo": "assets/raddabarnen.png"
+  },
+  {
+    "id": "barncancerfonden",
+    "namn": "Barncancerfonden",
+    "logo": "assets/barncancerfonden.png"
+  },
+  {
+    "id": "wwf",
+    "namn": "WWF",
+    "logo": "assets/wwf.png"
+  }
+]
