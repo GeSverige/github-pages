@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>GE Sverige – Välj förening</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f7fb;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #005BAC;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header img {
+      max-height: 60px;
+    }
+    main {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #005BAC;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    select, button {
+      font-size: 18px;
+      padding: 12px 18px;
+      margin: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #005BAC;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004a94;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 22px;
+      }
+      select, button {
+        width: 90%;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="GeSverige logotyp">
+  </header>
+
+  <main>
+    <h1>Stöd din förening när du handlar</h1>
+    <p>Välj din förening nedan:</p>
+
+    <select id="clubSelect">
+      <option value="">-- Välj förening --</option>
+      <option value="ifkboras">IFK Borås</option>
+      <option value="frolunda">Frölunda HC</option>
+      <option value="aik">AIK Fotboll</option>
+    </select>
+
+    <br>
+    <button onclick="goToShop()">Gå vidare till shoppen</button>
+  </main>
+
+  <script>
+    function goToShop() {
+      const club = document.getElementById('clubSelect').value;
+      if (club) {
+        window.location.href = 'https://shop.gesverige.se/?ref=' + club;
+      } else {
+        alert("Vänligen välj en förening först.");
+      }
+    }
+  </script>
+
+</body>
+</html>
